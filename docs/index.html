@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Challenge | Documentation and guide for installation</title>
+	<meta name="description" content="Thanks for purchasing Toochat. If you need any support, please contact with us.">
+	<meta name="author" content="Workcompany">
+	<meta name="copyright" content="Workcomapny">
+	<link rel="shortcut icon" type="image/png" href="img/logo.png">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/tree-viewer.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<div class="left-side">
+			<div class="logo">
+				<!-- <img src="img/logo.png" width="80" height="80" alt="" /> -->
+			</div>  
+			<div class="left-content">
+				<ul role="tablist">
+					<li role="presentation" class="active"><a href="#welcome" aria-controls="home" role="tab" data-toggle="tab"
+						>Welcome</a></li>
+
+					<li role="presentation"><a href="#firebase" aria-controls="home" role="tab" data-toggle="tab">
+						Setup Google Firebase </a></li>
+
+					<!-- <li role="presentation"><a href="#location" aria-controls="home" role="tab" data-toggle="tab">
+						Setup Google Places </a></li>
+
+					<li role="presentation"><a href="#admob" aria-controls="home" role="tab" data-toggle="tab">
+						Setup Google Admob</a></li> -->
+
+					<li role="presentation"><a href="#agora" aria-controls="home" role="tab" data-toggle="tab">
+						Setup Agora</a></li>
+
+					<li role="presentation"><a href="#sendgrid" aria-controls="home" role="tab" data-toggle="tab">
+						Setup SendGrid</a></li>
+
+					<!-- <li role="presentation">
+						<a href="#facebook" aria-controls="home" role="tab" data-toggle="tab">Setup Facebook login</a>
+					</li>
+
+					<li role="presentation"><a href="#apple" aria-controls="home" role="tab" data-toggle="tab">
+						Setup Apple Login</a></li>
+
+					<li role="presentation"><a href="#giphy" aria-controls="home" role="tab" data-toggle="tab">
+						Setup Giphy</a></li> -->
+
+					<li role="presentation"><a href="#backend" aria-controls="home" role="tab" data-toggle="tab">
+						Setup Parse Server</a></li>
+
+					<li role="presentation"><a href="#project" aria-controls="home" role="tab" data-toggle="tab">
+						Import and Setup the apps</a></li>
+
+					<li role="presentation"><a href="#admin_panel" aria-controls="home" role="tab" data-toggle="tab">
+						Install and Setup Admin Panel</a></li>
+
+					<li role="presentation"><a href="#support" aria-controls="home" role="tab" data-toggle="tab">
+						Support</a></li>
+				</ul>
+			</div>
+			<!-- <div class="copyright">
+				<p>Copyright &#169; 2022 <a href="https://www.appsdabanda.com">Workcompany</a></p>
+			</div> -->
+		</div>
+		<div class="right-side">
+			<div class="right-content">
+				<div id="welcome" class="content active fade in">
+					<h1>Chanllenge - video and livestreaming challenge app, chat, gifts,stories, payouts</h1>
+					<div class="content-welcome">
+						<p>
+
+						</p>
+					</div>
+					<div class="created">
+						<p>
+							Created: 01/02/2023
+							<br> Latest Update: 01/02/2023
+							<br> Email: <a href="mailto:workcompany@gmail.com">workcompany27@gmail.com</a>
+							<!-- <br> By: <a target="_blank" href="https://codecanyon.net/user/appsdabanda">Appsdabanda</a> -->
+
+							<br>
+							<br> 
+							<p>
+								This documentation was created to serve as a guide to help you to install <strong>Challenge</strong>.
+								Navigate through the left side menu to access the different section of this guide. 
+							</p>
+							
+					<!-- <div style="overflow: hidden; position: relative;">
+						<iframe width="800" height="443" src="https://www.youtube.com/embed/Mtrjx83JIO8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+					<br><br>  -->
+							
+							
+							<p>The menu on the left side contains the topics where we've covered everything you need to set up the app, from the basis
+								until you have the application installed on the server, allowing anyone anywhere in the world to access your product and 
+								enjoy the services.</p>
+
+							<p>Thank you for purchasing our App. If you have any question, please feel free to
+							contact us from <a href="mailto:workcompany27@gmail.com">here</a>.</p>
+
+						</p>
+					</div>
+				</div>
+
+				<div id="firebase" class="content fade">
+					<h1>Setup Firebase</h1>
+
+					<!-- <p>Firebase used for <strong> Google Login </strong>, <strong>Phone Login</strong>, <strong>Dynamic Links</strong>, <strong>Push notifications</strong>,
+						<strong>Monitoring</strong>, <strong>Analytics</strong> and <strong>Crashlytics</strong></p><br> -->
+
+						
+					<h3 class="hash-header" id="push_android">Create a firebase project</h3>
+				
+					<p><h5> Go to <a target="_blank" href="https://console.firebase.google.com/u/0/">Firebase developer console</a> and Create a project. </h5>
+	
+					<ol>
+						<li>Click in add app</li>
+						<li>Choose <strong>Android</strong></li>
+						<!-- <li>Choose <strong>Android</strong>, repeat this step for <strong>iOS</strong> and <strong>Web</strong> also</li> -->
+						<li>Add your desired app package</li>
+						<li>Save it</li>
+					</ol>
+	
+					<br><br>
+				
+					<h3 class="hash-header" id="push_android">Setup Push notifications for Android</h3>
+					<p>Push notifications for Android needs SenderID and FCM Token</a> </p>
+					<ol>
+						<li>CLick In Project Settings</li>
+						<li>Click in Cloud Messaging</li>
+						<li>In Top settings</li>
+						<li>Copy both Server key token (FCM) and Sender ID</li>
+						<li>Save it for later use</li>
+					</ol>
+
+					<br><br>
+				
+					<h3 class="hash-header" id="push_android">Setup dynamic links</h3>
+					<p>Dynamic links is used to share the app</a> </p>
+
+					<ol>
+						<li>CLick In Engage</li>
+						<li>Click in dynamic links</li>
+						<li>Enter all information needed for the link</li>
+						<li>Save it for later use</li>
+					</ol>
+
+					<br><br>
+					<div style="overflow: hidden; position: relative;">
+						<iframe width="750"
+								height="450"
+								type="text/html"
+								src="https://www.youtube.com/embed/RkmF0r__mWQ?list=PLB03_bT2r_QOTXCrC1TTcGheAs_sCtBk7"
+								allowfullscreen
+						></iframe>
+					</div>
+	
+					<!-- <br><br>
+					<h3 class="hash-header" id="push_web">Setup Push notifications for Web<a href="#push_web" class="hash-link"></a></h3>
+					<p>Push notifications for Web needs Web Push Token</a> </p>
+					<ol>
+						<li>CLick In Project Settings</li>
+						<li>Click in Cloud Messaging</li>
+						<li>In Web app settings</li>
+						<li>Copy Key-pair</li>
+						<li>Save it for later use</li>
+					</ol>
+	
+					<br><br>
+					<h4> IMPORTANT</h4>
+					<p class="note"><strong>Note</strong>: Phone Number Login for Android needs SHA-1 and SHA-256 correctly added in firebase</p>
+					<p>- Google Login and Phone Number Login for Android needs SHA-1 and SHA-256 correctly added in firebase</p> -->
+	
+				</div>
+	
+				<div id="location" class="content fade">
+	
+					<h1> Setup Google Places </h1>
+	
+					<!-- <p>Google Places used to <strong>Set City</strong> and <strong>Country </strong> including <strong>Geo Coordinates</strong></p><br><br>
+					<div style="overflow: hidden; position: relative;">
+						<iframe width="800"
+								height="443"
+								type="text/html"
+								src="https://www.youtube.com/embed/r7XAAoEDees?autoplay=0&fs=1&iv_load_policy=1&showinfo=1&rel=0&cc_load_policy=0&start=0&end=0"
+						></iframe>
+					</div>
+					<br><br> -->
+	
+					<p><h5> Go to <a target="_blank" href="https://console.cloud.google.com/projectselector2/google/maps-apis/credentials">Google Cloud Console</a> and Login with same firebase email </h5>
+	
+					<ol>
+						<li>Select the project (<strong>It has been created in firebase</strong>)</li>
+						<li>In Search bar, Enter <strong>Places API</strong> and <strong>Google Maps Javascript</strong> then choose it from list</li>
+						<li>Activate it if not activated yet</li>
+						<li>Click the menu button and select APIs & Services > Credentials.</li>
+						<li>On the Credentials page, click Create credentials > API key.</li>
+						<li>The API key created dialog displays your newly created API key.</li>
+						<li>Save it, we will use it later</li>
+					</ol>
+	
+					<br>
+					<h5>The new API key is listed on the Credential's page under API keys.</h5>
+					<h5><strong>REMEMBER: </strong> Restrict the API key before using it in production.
+						<a target="_blank" href="https://developers.google.com/places/web-service/get-api-key#restrict-key">Check how to do it.</a>
+					</h5>
+	
+				</div>
+	
+				<div id="admob" class="content fade">
+	
+					<h1> Setup Google Admob </h1>
+	
+					<p>Google Admob used to show  <strong>Banner</strong> and <strong>Rewarded Video Ads</strong> Only for iOS and Android</p><br>
+					<!-- <div style="overflow: hidden; position: relative;">
+						<iframe width="800"
+								height="443"
+								type="text/html"
+								src="https://www.youtube.com/embed/TsMdWjrsx0I?autoplay=0&fs=1&iv_load_policy=1&showinfo=1&rel=0&cc_load_policy=0&start=0&end=0"
+						></iframe>
+					</div>
+					<br><br> -->
+	
+					<p><h5> Go to <a target="_blank" href="https://apps.admob.com/">Admob</a> and Login or Register. </h5>
+	
+					<ol>
+						<li>Click Apps in the sidebar.</li>
+						<li>Select App or Create new. (Android and iOS)</li>
+						<li>Click the icon in the App ID column</li>
+						<li>Copy the ID of an app.</li>
+						<li>Save it, we will use it later</li>
+					</ol>
+					<br>
+	
+					<p>Now create your ads for Profile banner and Rewarded Video</p>
+	
+					<ol>
+						<li>Click Apps in the sidebar.</li>
+						<li>Select the name of the app you're creating this ad unit for. ...</li>
+						<li>Click Ad units in the sidebar.</li>
+						<li>Click Get started.</li>
+						<li>
+							Click Select for the <strong>Banner</strong> or
+							<strong>Rewarded Video</strong> ad
+							format
+						</li>
+						<li>Enter a name for this ad unit.</li>
+						<li>Save and get ID</li>
+						<li>Save it, we will use it later</li>
+					</ol>
+	
+				</div>
+	
+				<div id="agora" class="content fade">
+	
+					<h1> Setup Agora.io </h1>
+		
+					<h3 class="hash-header" id="push_android">Create an app</h3>
+					<p><h5> Go to <a target="_blank" href="https://console.agora.io/">Agora.io</a> and Login or Register. </h5>
+	
+					<ol>
+						<li>Create new app</li>
+						<li>Choose <strong>Testing mode: APP ID </strong></li>
+						<li>Copy App ID</li>
+						<li>Save it, we will use it later</li>
+					</ol>
+
+					<br><br>
+					<p class="note"><strong>Note</strong>: Agora.io is used for <strong>Live Streaming</strong></p><br>
+
+					<br><br>
+					<div style="overflow: hidden; position: relative;">
+						<iframe width="750"
+								height="450"
+								type="text/html"
+								src="https://www.youtube.com/embed/56bIENYH3es?list=PLB03_bT2r_QOTXCrC1TTcGheAs_sCtBk7"
+								allowfullscreen
+						></iframe>
+					</div>
+				</div>
+
+				<div id="sendgrid" class="content fade">
+	
+					<h1> Setup Sendgrid </h1>
+		
+					<h3 class="hash-header" id="push_android">Create a SendGrid API Key</h3>
+					<p><h5> Go to <a target="_blank" href="https://sendgrid.com/">sendgrid.com</a> and Login or Register. </h5>
+	
+					<ol>
+						<li>Click on <strong>Settings>API Keys</strong></li>
+						<li>Click on <strong>Create API Key</strong> button</li>
+						<li>Enter a name for <strong>API Key</strong></li>
+						<li>Choose <strong>Full Access</strong></li>
+						<li>Click on <strong>Create and View</strong></li>
+						<li>Save it, we will use it later</li>
+					</ol>
+					<br>
+
+					<h3 class="hash-header" id="push_android">Create a Sender</h3>
+	
+					<ol>
+						<li>Click on <strong>Settings>Sender Authentication</strong></li>
+						<li>Click on <strong>Verify single sender</strong> button</li>
+						<li>Click on <strong>Create API Key</strong> button</li>
+						<li>Fill out the form and <strong>Create</strong></li>
+						<li>Save it, we will use it later</li>
+					</ol>
+
+					<br><br>
+					<p class="note"><strong>Note</strong>: Sendgrid is used to send <strong>emails</strong>, for reset password feature</p><br>
+
+					<br><br>
+					<div style="overflow: hidden; position: relative;">
+						<iframe width="750"
+								height="450"
+								type="text/html"
+								src="https://www.youtube.com/embed/gvjsnT-G4D0?list=PLB03_bT2r_QOTXCrC1TTcGheAs_sCtBk7"
+								allowfullscreen
+						></iframe>
+					</div>
+				</div>
+	
+				<!-- <div id="facebook" class="content fade">
+	
+					<h1> Setup Facebook </h1>
+	
+					<p>Facebook used for <strong>Facebook Login</strong> in <strong>Android </p><br>
+					<div style="overflow: hidden; position: relative;">
+						<iframe width="800" height="443" src="https://www.youtube.com/embed/uygvPf-isWo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+					<br><br>
+	
+					<p><h5> Go to <a target="_blank" href="https://developers.facebook.com/">Facebook Developer</a> and Login  or Register </h5>
+	
+					<ol>
+						<li>Select Facebook Login product and click the Setup.</li>
+						<li>Select Android as the App platform. Then iOS, Then Web</li>
+						<li>Add key hash for release and debug. *</li>
+						<li>Click the Save button.</li>
+						<li>
+							Copy <strong>facebook_app_id</strong>, <strong>access_token</strong> and<strong> fb_login_protocol_scheme</strong>
+						</li>
+						<li> Go to App Review -> Request permissions and Features</li>
+						<li> Click in request advanced access to permissions bellow: <strong>email</strong> and <strong>public_profile</strong></li>
+						<li>Save it, we will use it later</li>
+					</ol>
+	
+					<h5>
+						<strong>*</strong> You need to
+						<a target="_blank" href="https://developers.facebook.com/docs/android/getting-started/#create_hash">
+							<strong>Generate Key hash</strong></a> for facebook Login to work.
+					</h5>
+	
+	
+				</div>
+	
+				<div id="apple" class="content fade">
+	
+					<h1> Setup Apple Login </h1>
+	
+					<p>Apple Login used for <strong>Apple Login</strong> in <strong>iOS </strong>, <strong>Android</strong> and <strong>Web</strong></p><br><br>
+	
+					<p>Before you can start integrating (or even testing) Sign in with Apple you need a <a href="https://developer.apple.com/programs/" rel="ugc">paid membership to the Apple Developer Program</a>. Sign in with Apple is one of the restricted services which is not available for free with just an Apple ID (<a href="https://developer.apple.com/programs/whats-included/" rel="ugc">source</a>).</p>
+					<h3 class="hash-header" id="setup">Setup <a href="#setup" class="hash-link">#</a></h3>
+					<h4 id="register-an-app-id">Register an App ID</h4>
+					<p>If you don't have one yet, create a new one at <a href="https://developer.apple.com/account/resources/identifiers/list/bundleId" rel="ugc">https://developer.apple.com/account/resources/identifiers/list/bundleId</a> following these steps:</p>
+					<ul>
+						<li>Click "Register an App ID"</li>
+						<li>In the wizard select "App IDs", click "Continue"</li>
+						<li>Set the <code>Description</code> and <code>Bundle ID</code>, and select the <code>Sign In with Apple</code> capability
+							<ul>
+								<li>Usually the default setting of "Enable as a primary App ID" should suffice here. If you ship multiple apps that should all share the same Apple ID credentials for your users, please consult the Apple documentation on how to best set these up.</li>
+							</ul>
+						</li>
+						<li>Click "Continue", and then click "Register" to finish the creation of the App ID</li>
+					</ul>
+					<p>In case you already have an existing App ID that you want to use with Sign in with Apple:</p>
+					<ul>
+						<li>Open that App ID from the list</li>
+						<li>Check the "Sign in with Apple" capability</li>
+						<li>Click "Save"</li>
+					</ul>
+					<p>If you have change your app's capabilities, you need to fetch the updated provisioning profiles (for example via Xcode) to use the new capabilities.</p>
+					<h4 id="create-a-service-id">Create a Service ID</h4>
+					<p>The Service ID is only needed for a Web or Android integration. If you only intend to integrate iOS you can skip this step.</p>
+					<p>Go to your apple developer page then <a href="https://developer.apple.com/account/resources/identifiers/list" rel="ugc">"Identifiers"</a> and follow these steps:</p>
+					<p>Next go to <a href="https://developer.apple.com/account/resources/identifiers/list/serviceId" rel="ugc">https://developer.apple.com/account/resources/identifiers/list/serviceId</a> and follow these steps:</p>
+					<ul>
+						<li>Click "Register an Services ID"</li>
+						<li>Select "Services IDs", click "Continue"</li>
+						<li>Set your "Description" and "Identifier"
+							<ul>
+								<li>The "Identifier" will later be referred to as your <code>clientID</code></li>
+							</ul>
+						</li>
+						<li>Click "Continue" and then "Register"</li>
+					</ul>
+					<p>Now that the service is created, we have to enable it to be used for Sign in with Apple:</p>
+					<ul>
+						<li>Select the service from the list of services</li>
+						<li>Check the box next to "Sign in with Apple", then click "Configure"</li>
+						<li>In the <code>Domains and Subdomains</code> add the domains of the websites on which you want to use Sign in with Apple, e.g. <code>example.com</code>. You have to enter at least one domain here, even if you don't intend to use Sign in with Apple on any website.</li>
+						<li>In the <code>Return URLs</code> box add the full return URL you want to use, e.g. <a href="https://example.com/callbacks/sign_in_with_apple" rel="ugc">https://example.com/callbacks/sign_in_with_apple</a></li>
+						<li>Click "Next" and then "Done" to close the settings dialog</li>
+						<li>Click "Continue" and then "Save" to update the service</li>
+					</ul>
+					<p>In order to communicate with Apple's servers to verify the incoming authorization codes from your app clients, you need to create a key at <a href="https://developer.apple.com/account/resources/authkeys/list" rel="ugc">https://developer.apple.com/account/resources/authkeys/list</a>:</p>
+					<ul>
+						<li>Click "Create a key"</li>
+						<li>Set the "Key Name" (E.g. "Sign in with Apple key")</li>
+						<li>Check the box next to "Sign in with Apple", then click "Configure" on the same row</li>
+						<li>Under "Primary App ID" select the App ID of the app you want to use (either the newly created one or an existing one)</li>
+						<li>Click "Save" to leave the detail view</li>
+						<li>Click "Continue" and then click "Register"</li>
+						<li>Now you'll see a one-time-only screen where you must download the key by clicking the "Download" button
+							<ul>
+								<li>Also note the "Key ID" which will be used later when configuring the server</li>
+							</ul>
+						</li>
+					</ul>
+					<p>Now everything is set up on Apple's developer portal and we can start setting up the server.</p>
+					<h3 class="hash-header" id="server">Server <a href="#server" class="hash-link">#</a></h3>
+					<p>In your Parse Server you need to add a post endpoint for this to work, Add copy and paste the code bellow, then change <strong>com.angopapo.heyto</strong> to your own Android Package name</p>
+					<pre><code class="language-javascript">
+	
+						const express = require("express");
+						const bodyParser = require("body-parser");
+	
+						var appleAuth = express();
+	
+						appleAuth.use(bodyParser.urlencoded({ extended: false }));
+						appleAuth.post("/apple/login", (request, response) => {
+	
+						const redirect = `intent://callback?${new URLSearchParams(request.body).toString()}
+							#Intent;package="com.angopapo.heyto"; scheme=signinwithapple;end`;
+							console.log(`Redirecting to ${redirect}`);
+							response.redirect(307, redirect);
+						});
+	
+						const listener = appleAuth.listen(appleAuthPort, () => {
+							console.log("Verify server is running on port: " + listener.address().port);
+						});
+					</code></pre>
+	
+	
+					<h3 class="hash-header" id="ios">iOS <a href="#ios" class="hash-link">#</a></h3>
+					<p>At this point you should have added the Sign in with Apple capability to either your own app's capabilities or the test application you created to run the app.</p>
+					<p>In case you don't have <code>Automatically manage Signing</code> turned on in Xcode, you will need to recreate and download the updated Provisioning Profiles for your app, so they include the new <code>Sign in with Apple</code> capability. Then you can download the new certificates and select them in Xcode.</p>
+					<p>In case XCode manages your signing, this step will be done automatically for you. Just make sure the <code>Sign in with Apple</code> capability is activated as described in the example below.</p>
+					<p>Additionally this assumes that you have at least one iOS device registered in your developer account for local testing, so you can run the example on a device.</p>
+	
+					<h4 id="your-app-2">Your App</h4>
+					<ul>
+						<li>First and foremost make sure that your app has the "Sign in with Apple" capability (<code>Runner</code> (file browser side bar) -&gt; <code>Targets</code> -&gt; <code>Runner</code> -&gt; <code>Signing &amp; Capabilities</code>), as otherwise Sign in with Apple will fail without visual indication (the code will still receive exceptions)</li>
+						<li>Either integrate the example server as shown above, or build your own backend
+							<ul>
+								<li>Ensure that the <code>clientID</code> used when validating the received <code>code</code> parameter with Apple's server is dependent on the client: Use the App ID (also called "Bundle ID" in some places) when using codes from apps running on Apple platforms, and use the service ID when using a code retrieved from a web authentication flow</li>
+							</ul>
+						</li>
+					</ul>
+	
+					<p>Go to <strong>lib-> app-> config.dart</strong> and Update: <strong>appleLoginClientId</strong>, <strong>appleAndroidLoginRedirectUrl</strong> and <strong>appleWebLoginRedirectUrl</strong></p>
+	
+					<br><br>
+					<div>
+						<h2>IMPORTANT NOTE:</h2>\
+						<p> - Apple Login for <strong>Android</strong> and <strong>Web</strong> is disabled by default in your app, you need to enable it in <strong>lib-> app-> setup.dart -> isAppleLoginEnabled = true</strong> once setup finished </p>
+						<p> - Apple Login for iOS is enabled by default since is required for Apple to Approve the app, You can disable it in <strong>lib-> app-> setup.dart -> isAppleLoginEnabledForIOS = false</strong> but you also will need to disable <strong>Facebook Login</strong> and <strong>Google Login</strong></p>
+					</div>
+	
+				</div>  -->
+	
+				<div id="giphy" class="content fade">
+	
+					<h1> Setup Giphy </h1>
+	
+					<h3 class="hash-header" id="push_android">Create an app</h3>
+					<p><h5> Go to <a target="_blank" href="https://developers.giphy.com/dashboard/">Giphy developers</a> and Login or Create an Account. </h5>
+	
+					<ol>
+						<li>Create an app</li>
+						<li>Select <strong>API</strong> and continue to create</li>
+						<li>Copy API key</li>
+						<li>Save it, we will use it later</li>
+					</ol>
+
+					<br><br>
+					<p class="note"><strong>Note</strong>: Giphy is used to send <strong>Gifs</strong> in <strong> livestreaming </strong></strong></p><br>
+	
+				</div>
+	
+				<div id="backend" class="content fade">
+					<h1> Setup Parse Server Backend </h1>
+	
+					<p>We used <a target="_blank" href="https://parseplatform.org/"><strong>Parse Server</strong></a> 
+						has backend, for more information about it, click on the link.You have several options on how to get Parse Server as BaaS or install
+						your Self-hosted Parse Server.</p>
+	
+					<br><br>
+					<h5>
+						1) <strong>Cloud Services:</strong> There are several companies offering
+						Parse Server.
+					</h5>
+	
+					<br>
+					<ul>
+						<li>
+							<a target="_blank" href="http://www.back4app.com" rel="nofollow"
+							>Back4app</a
+							>
+							<em>Recommended</em>
+						</li>
+						<li>
+							<a target="_blank" href="https://www.sashido.io" rel="nofollow"
+							>SashiDo</a
+							>
+						</li>
+						<li>
+							<a target="_blank" href="https://glitch.com" rel="nofollow">Glitch</a>
+						</li>
+						<li>
+							<a target="_blank" href="https://flynn.io" rel="nofollow">Flynn</a>
+						</li>
+					</ul>
+	
+
+					<br><br>
+					<h5>
+						2) <strong>Self-Hosted:</strong> You can install Parse server in your own
+						Hosting Provider. <strong>Required NodeJS</strong>
+					</h5>
+
+					<br>
+	
+					<ul>
+						<li>
+							<a
+									target="_blank"
+									href="http://www.a2hosting.com/?aid=58764711d35b6"
+									rel="nofollow"
+							>a2hosting</a
+							>
+							<em
+							>1st Recommended <!-- (Purchase using this
+								<a href="http://www.a2hosting.com/?aid=58764711d35b6"
+								><strong>link</strong>)</a
+								>  --> </em
+							>
+						</li>
+						<li>
+							<a
+									target="_blank"
+									href="https://www.digitalocean.com/community/tutorials/how-to-run-parse-server-on-ubuntu-14-04"
+									rel="nofollow"
+							>Digital Ocean</a
+							>
+							<em
+							>2nd Recommended <!-- (Purchase using this
+								<a href="https://m.do.co/c/00d9ebe3ddf6"
+								><strong>link</strong>)</a
+								> --></em
+							>
+						</li>
+						<li>
+							<a
+									target="_blank"
+									href="https://devcenter.heroku.com/articles/deploying-a-parse-server-to-heroku"
+									rel="nofollow"
+							>Heroku and mLab</a
+							>
+						</li>
+						<li>
+							<a
+									target="_blank"
+									href="http://mobile.awsblog.com/post/TxCD57GZLM2JR/How-to-set-up-Parse-Server-on-AWS-using-AWS-Elastic-Beanstalk"
+									rel="nofollow"
+							>AWS and Elastic Beanstalk</a
+							>
+						</li>
+						<li>
+							<a
+									target="_blank"
+									href="https://medium.com/@justinbeckwith/deploying-parse-server-to-google-app-engine-6bc0b7451d50"
+									rel="nofollow"
+							>Google App Engine</a
+							>
+						</li>
+						<li>
+							<a
+									target="_blank"
+									href="https://azure.microsoft.com/en-us/blog/azure-welcomes-parse-developers/"
+									rel="nofollow"
+							>Microsoft Azure</a
+							>
+						</li>
+						<li>
+							<a
+									target="_blank"
+									href="https://github.com/cf-platform-eng/pws-parse-server"
+							>Pivotal Web Services</a
+							>
+						</li>
+					</ul>
+
+					<br><br>
+					<p class="note"><strong>Note</strong>: The tutorial is about <strong>Back4app.com</strong> if you want to work
+						with any other, you need to do it yourself, hire developer or pay
+						installation fees</p><br><br>
+
+					<h3 class="hash-header" id="push_android">Create a Back4app account and app</h3>
+					<p><h5> Go to <a target="_blank" href="https://www.back4app.com/">Back4app.com</a> signup and Create a project. </h5>
+
+					<ol>
+						<li>Access your parse server settings: <strong>App Settings > Security & Keys</strong></li>
+						<li>Copy the <strong>Application ID</strong>, <strong>Client key</strong> and <strong>Master key</strong></li>
+						<li>Save it for later use</li>
+					</ol>
+
+					<br><br>
+
+					<h3 class="hash-header" id="push_android">Setup Live Query Url</h3>
+					
+					<ol>
+						<li>Access your parse server settings: <strong>App Settings > Sever Settings</strong></li>
+						<li>Click on <strong>Server URL and Live Query</strong> settings</li>
+						<li>Enter your desired url and save</li>
+						<li>Save it for later use</li>
+					</ol>
+
+					<br><br>
+					<div style="overflow: hidden; position: relative;">
+						<iframe width="750"
+								height="450"
+								type="text/html"
+								src="https://www.youtube.com/embed/6_nke4DMCDQ?list=PLB03_bT2r_QOTXCrC1TTcGheAs_sCtBk7"
+								allowfullscreen
+						></iframe>
+					</div>
+				</div>
+	
+				<div id="project" class="content fade">
+					<h1> Import Project, setup App and Customize </h1>
+	
+					<h3 class="hash-header" id="flutter">Install or Update flutter</h3>
+					<p>Since this project is developed with Flutter, make sure to correctly install flutter and dart in your computer</p>
+					<p>If you need help to install flutter click here:<a target="_blank" href="https://docs.flutter.dev/get-started/install"> Install Flutter</a> </p>
+					<br><br>
+	
+					<h3 class="hash-header" id="import">Import and Setup Project</h3>
+					<p>You can use <a target="_blank" href="https://developer.android.com/studio">Android Studio</a> or <a target="_blank" href="https://code.visualstudio.com/">Visual Studio Code</a>, make sure to use latest versions</p>
+					<br>
+	
+					<ol>
+						<li>Extract Zip file Downloaded from codecanyon</li>
+						<li>Navigate to challenge_app.zip file and extract it too</li>
+						<li>Open android Studio to Import the project</li>
+						<li>Click on <strong>Import Android Studio project</strong></li>
+						<li>Navigate to extracted challenge_app folder</li>
+						<li>Click in OK or import then wait for Android Studio to load setup all files and index them.</li>
+						<li>Open terminal or cmd </li>
+						<li>In your project root run <code>$ flutter pub get</code> and wait to finish</li>
+					</ol>
+					
+					<h5>After that, we will update all credentials we saved in steps before.</h5>
+	
+					<br><br>
+	
+					<h3 class="hash-header" id="import">Update configuration file</h3>
+					<p>Open the file <strong>global_config.dart</strong> located in the folder 
+						<in:strong>lib/configuration/</in:strong>, and fill the info listed bellow:</p>
+					<br>
+	
+					<ol>
+						<li><strong>appName</strong> - your app's name</li>
+						<li><strong>appVersion</strong> - your app's version</li>
+						<li><strong>packageName</strong> - your app's package name</li>
+						<li><strong>companyName</strong> - your company name </li>
+						<li><strong>initialCountry</strong> - initial country code for the app</strong></li>
+						<li><strong>serverUrl</strong> - the domain of your parse server 
+							(for Back4app: <strong>https://parseapi.back4app.com/</strong>")</li>
+						<li><strong>liveQueryUrl</strong> - parse server live query url</li>
+						<li><strong>appId</strong> - parse server application ID</li>
+						<li><strong>clientKey</strong> - parse server client key</li>
+						<li><strong>agoraAppId</strong> - agora.io app's id</li>
+						<li><strong>appEmailAddress</strong> - sendgrid.com sender (the email configure as sender in sendergid)</li>
+						<li><strong>senderGridApiKey</strong> - sendgrid.com API Key</li>
+					</ol>
+
+					<br><br>
+
+					<h3 id="setup_android_app">Setup Android App</h3>
+					<ol>
+						<li>Open terminal or cmd </li>
+						<li>In your project root run <code>$ flutter pub run change_app_package_name:main com.your.package.name</code></li>
+					</ol>
+					<br><br>
+	
+					<!--
+					<h3 id="setup_web_app">Setup Web App</h3>
+					<div style="overflow: hidden; position: relative;">
+						<iframe width="800"
+								height="443"
+								type="text/html"
+								src="https://www.youtube.com/embed/hIWVieZm8g4?autoplay=0&fs=1&iv_load_policy=1&showinfo=1&rel=0&cc_load_policy=0&start=0&end=0"
+						></iframe>
+					</div>
+					<br><br> 
+					<ol>
+						<li>Open <code>index.html</code> and change <strong>description</strong> and <strong>google-signin-client_id</strong></li>
+						<li>Open <code>firebase-messaging-sw.js</code> and change <strong>firebase.initializeApp</strong> content </li>
+					</ol>-->
+				
+					<h3 class="hash-header" id="push_android">Setup Firebase in the app</h3>
+					
+					<p><h5> Go to <a target="_blank" href="https://firebase.google.com/docs/cli#install_the_firebase_cli">Firebase CLI installation</a> 
+						to install the firebase cli in your Computer, and login using the cli. </h5>
+
+					<ol>
+						<li>Open the project's root in the <strong>terminal</strong> or <strong>cmd</strong></li>
+						<li>Run the following command to install <strong>Flutterfire</strong>: <code>dart pub global activate flutterfire_cli</code> </li>
+						<li>Run the `configure` command, select a Firebase project and platforms: <code>flutterfire configure</code> </li>
+					</ol>
+	
+					<br><br>
+
+					<h3 id="setup_logo_splash">Customize Logo and Splash</h3>
+					<ol>
+						<li>Go to <code>assets-> images</code> and override <code>icon.png</code> and  <code>icon_text.png</code> with your own Logos and 
+							Branding</li>
+						<li>In your project root run <code>$ flutter pub run flutter_native_splash:create</code></li>
+					</ol>
+
+					<br><br>
+					<div style="overflow: hidden; position: relative;">
+						<iframe width="750"
+								height="450"
+								type="text/html"
+								src="https://www.youtube.com/embed/i-iGHaDzhOo?list=PLB03_bT2r_QOTXCrC1TTcGheAs_sCtBk7"
+								allowfullscreen
+						></iframe>
+					</div>
+				</div>
+	
+				<div id="admin_panel" class="content fade">
+	
+					<h1> Install and Setup Admin Panel</h1>
+	
+					<p>Parse Server has <a href="https://github.com/parse-community/parse-dashboard" target="_blank">Parse Dashboard </a> But since it's not easy to use, we decided to offer an easy and modern Admin Panel for you. </p>
+					<p>To Install Admin Panel is very easy and also it can be installed on any hosting provider, Shared, VPS, Dedicated, Cloud or others. Keep in mind that you need a Parse Server running somewhere, and at least 1 app is running, in order to get this Admin panel to work properly. </p>
+	
+					<!-- <div style="overflow:hidden;position: relative;">
+						<iframe width="800" height="443" type="text/html" src="https://www.youtube.com/embed/IyuXnvBJmWI?autoplay=0&fs=1&iv_load_policy=1&showinfo=1&rel=0&cc_load_policy=0&start=0&end=0"></iframe>
+						<div style="position: absolute;bottom: 10px;left: 0;right: 0;margin-left: auto;margin-right: auto;color: #fff;text-align: center;">
+							<small style="line-height: 1.8;font-size: 0px;background: #fff;"> <a href="https://support.angopapo.com/">Angopapo support</a> </small></div><style>.newst{position:relative;text-align:right;height:420px;width:520px;} #gmap_canvas img{max-width:none!important;
+							background:none!important}</style>
+					</div> -->
+					<br/><br/>
+		
+					<h3 id="setup_admin">Upload Admin Panel Files to your hosting.</h3>
+					
+					<ol>
+						<li>  Extract <code>admin_panel.zip</code> you can found it in Main Files.zip</li>
+						<li>  run <code>$ npm install</code> in Admin Panel root Make sure you have <a href="https://nodejs.org/en/download/" target="_blank">NodeJS</a> installed</li>
+						<li>  run <code>$ composer install</code> in Admin Panel root Make sure you have <a href="https://getcomposer.org/" target="_blank">Composer</a> installed</li>
+						<li>  Open <code>Configs.php</code> file and change: Website root url, <code>AppId</code>, <code>RestApiKey</code> and <code>MasterKey</code> of your Parse Server App.</li>
+						<li>  Upload in your hosting and Test by opening the url where you placed your admin panel in your browser.</li>
+	
+					</ol>
+					<br/><br/>
+	
+					<h3 id="setup_admin"><strong>Configuration</strong></h3>
+	
+					<p class="note"><strong>Note</strong>: Don't create user manualy in your parse dashboard, make sure you registered user in the app.</p>
+					
+					<ol>
+	
+						<li> Setup Admin User(s)
+	
+							<pre>  Go to Parse Dashboard, and Under Classes, click in  <code>Users</code></pre>
+							<pre>  Choose User to turn admin, navigate to <code>role</code> column and set it's value <code>from</code> user to <code>admin</code> </pre>
+	
+						</li>
+						<li>Open your admin panel link and login.
+	
+							<pre>  Open your browser and input your admin panel url</pre>
+							<pre>  Login using email and password of any User you set admin role. </pre>
+	
+						</li>
+					</ol>
+	
+					<br/><br/>
+	
+					<h3 id="explore"><strong>How to use</strong></h3>
+	
+					<p>Once Logged in, you will directly see how easy is to use Admin Panel, It allows you to see and manage almost
+						everything of your app, but for advanced use, for example to delete objects, you will need to use your Parse Dashboard
+						But we process that, we will add more feature in the next version.</p>
+	
+					<p>With <strong> Admin Panel version 1.1</strong> you can: </p>
+	
+					<ol>
+						<li>See all classes records</li>
+						<li>Add new gifts</li>
+						<li>Add new category</li>
+						<li>View Users/Admin Data</li>
+						<li>View Stories Data</li>
+						<li>View Lives Data</li>
+						<li>End a Livestreaming</li>
+						<li>View Comments Data</li>
+						<li>View Videos Data</li>
+						<li>Play Videos Data</li>
+						<li>View Challenges Data</li>
+						<li>View Reports Data</li>
+						<li>View and manage Payouts</li>
+						<li>See Payouts Notification</li>
+						<li>View Payments</li>
+						<!-- <li>Add credits to user <strong>New</strong></li>
+						<li>Add premium period to user <strong>New</strong></li>
+						<li>Login Settings to Enable or Disabled Logins system <strong>New</strong></li> --> 
+					</ol>
+	
+					<br/><br/>
+	
+					<h3 id="gift"><strong>Add your own Gifts</strong></h3>
+	
+					<p>Gifts are animated images that Users can offer each others for any reason, Heyto apps accept only Lottie files in Json format. You can download lottie files <a href="https://lottiefiles.com/" target="_blank">here</a></p>
+	
+					<ol>
+						<li>Open your Admin panel</li>
+						<li>Navigate to Gifts</li>
+						<li>Click and choose <strong>Add new gift</strong></li>
+						<li>Enter the gift <strong>Name, credits, category and file</strong></li>
+					</ol>
+	
+					<p>Gift <strong>Name</strong> is just for you to identify it, Gift <strong>Tickets</strong> is an amount that is needed for someone to purchase it and Gift <strong>File</strong> is a file download in Lottie website or created with After Effect and bodymovin, also it must be in <strong>JSON</strong> format extension.</p>
+	
+					<br/><br/>
+
+	
+					<h3 id="gift"><strong>Add your own Categories</strong></h3>
+	
+					<p>Gifts are animated images that Users can offer each others for any reason, Heyto apps accept only Lottie files in Json format. You can download lottie files <a href="https://lottiefiles.com/" target="_blank">here</a></p>
+	
+					<ol>
+						<li>Open your Admin panel</li>
+						<li>Navigate to category</li>
+						<li>Click and choose <strong>Add new category</strong></li>
+						<li>Enter the category <strong>Name and file</strong></li>
+					</ol>
+
+					<br/><br/>
+
+	
+					<h3 id="credits"><strong>Sources and Credits</strong></h3>
+	
+					<p>This Admin Panel uses there programing languages
+	
+					<ul>
+						<li>PHP</li>
+						<li>Javascript</li>
+					</ul>
+	
+					<br>
+					<p>We also used these:
+	
+					<ul>
+						<li>HTML</li>
+						<li>CSS</li>
+						<li>Javascript</li>
+						<li>Composer</li>
+					</ul>
+	
+					<hr>
+	
+				</div>
+
+				<div id="support" class="content fade">
+					<h1> Supports </h1>
+					<p>Thank you for reading the documentation. If you still have any question or any problem, please
+						contact us. We'll give you the best support. Thanks.</p>
+					<ul style="list-style: none;">
+						<li><strong>Support email address:</strong> workcompany27@gmail.com</li>
+					</ul>
+
+					<!-- <p><strong>Have you enjoyed the App and its documentation?</strong> Please, don't forget to rate this item and leave your 
+					review <a target="_blank" href="https://codecanyon.net/user/appsdabanda/portfolio">here</a></p>
+
+					<p><a target="_blank" href="https://codecanyon.net/user/appsdabanda">Appsdabanda</a></p> -->
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<script src="js/jquery-3.1.0.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jstree.min.js"></script>
+	<script src="js/jstree.active.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>

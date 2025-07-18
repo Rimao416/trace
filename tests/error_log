@@ -1,0 +1,14 @@
+[18-Aug-2021 15:16:42 UTC] PHP Fatal error:  Uncaught Parse\ParseException: Failed to connect to localhost port 1337 after 0 ms: Connection refused in /home/jasparhng/public_html/admincp/src/Parse/ParseClient.php:584
+Stack trace:
+#0 /home/jasparhng/public_html/admincp/src/Parse/ParseServerInfo.php(44): Parse\ParseClient::_request('GET', 'serverInfo/', NULL, NULL, true)
+#1 /home/jasparhng/public_html/admincp/src/Parse/ParseServerInfo.php(108): Parse\ParseServerInfo::getServerInfo()
+#2 /home/jasparhng/public_html/admincp/tests/bootstrap.php(18): Parse\ParseServerInfo::getVersion()
+#3 {main}
+  thrown in /home/jasparhng/public_html/admincp/src/Parse/ParseClient.php on line 584
+[18-Aug-2021 15:17:36 UTC] PHP Fatal error:  Uncaught Parse\ParseException: Failed to connect to localhost port 1337 after 0 ms: Connection refused in /home/jasparhng/public_html/admincp/src/Parse/ParseClient.php:584
+Stack trace:
+#0 /home/jasparhng/public_html/admincp/src/Parse/ParseServerInfo.php(44): Parse\ParseClient::_request('GET', 'serverInfo/', NULL, NULL, true)
+#1 /home/jasparhng/public_html/admincp/src/Parse/ParseServerInfo.php(108): Parse\ParseServerInfo::getServerInfo()
+#2 /home/jasparhng/public_html/admincp/tests/bootstrap.php(18): Parse\ParseServerInfo::getVersion()
+#3 {main}
+  thrown in /home/jasparhng/public_html/admincp/src/Parse/ParseClient.php on line 584

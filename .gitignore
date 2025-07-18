@@ -1,0 +1,28 @@
+.idea
+composer.lock
+
+# npm based parse-server-test
+node_modules
+logs
+test_logs
+
+# ignore test results
+phpunit-test-results
+.phpunit.result.cache
+
+*.log
+
+coverage.xml
+
+# ignore phpdoc
+output/
+
+/vendor
+/node_modules
+.env
+.env.backup
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+

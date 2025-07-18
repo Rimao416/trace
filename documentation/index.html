@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Trace Social Network | Documentation and guide for installation</title>
+	<meta name="description" content="Thanks for purchasing Trace. If you need any support, please contact with us.">
+	<meta name="author" content="Workcompany">
+	<meta name="copyright" content="Workcomapny">
+	<link rel="shortcut icon" type="image/png" href="img/logo.png">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/tree-viewer.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<div class="left-side">
+			<div class="logo">
+				<img src="img/logo.png" width="130" height="130" alt="" />
+			</div>
+			<div class="left-content">
+				<ul role="tablist">
+					<li role="presentation" class="active"><a href="#one" aria-controls="home" role="tab"
+							data-toggle="tab">Welcome</a></li>
+					<li role="presentation"><a href="#two" aria-controls="home" role="tab" data-toggle="tab">Setup FireBase</a></li>
+					<li role="presentation"><a href="#three" aria-controls="home" role="tab" data-toggle="tab">Setup Agora</a></li>
+					<li role="presentation"><a href="#four" aria-controls="home" role="tab" data-toggle="tab">Setup Facebook Login</a></li>
+					<li role="presentation"><a href="#five" aria-controls="home" role="tab" data-toggle="tab">Setup Parse Server</a></li>
+					<li role="presentation"><a href="#six" aria-controls="home" role="tab" data-toggle="tab">Install Trace</a></li>
+					<li role="presentation"><a href="#seven" aria-controls="home" role="tab" data-toggle="tab">Install Admin Panel</a></li>
+					<li role="presentation"><a href="#ten" aria-controls="home" role="tab" data-toggle="tab">Support</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="right-side">
+			<div class="right-content">
+				<div id="one" class="content active fade in">
+					<h1>Trace - SOCIAL NETWORK WITH VIDEOS, STORIES, LIVE STREAMING, NEWS FEED, CHAT, VIDEO AND AUDIO CALLS</h1>
+					<div class="content-welcome">
+						<p>
+
+						</p>
+					</div>
+					<div class="created">
+						<p>
+							Created: 02/08/2023
+							<br> Latest Update: 02/08/2023
+							<br> Email: <a href="mailto:support@appsdabanda.com">workcompany27@gmail.com</a>
+							<br> By: <a href="https://www.appsdabanda.com">Appsdabanda</a>
+
+							<br>
+							<br> 
+							<h3 id="setup_web_app">Trace test drive on iOS Emulator 🔥🔥🔥</h3>
+					<div style="overflow: hidden; position: relative;">
+						<iframe width="800" height="443" type="text/html" src="https://www.youtube.com/embed/AzqniYOapAY?si=BBf0jeBpy0c7FlbR"></iframe>
+					</div>
+					<br><br> 
+							<p>
+								This documentation was created to serve as a guide to help anyone to install Trace on your computer and run it for testing reasons then makes changes if you want it to.
+								Navigate through the left side menu to access the different section of this guide. 
+							</p>
+
+							<p>Thank you for purchasing our App. If you have any question, please feel free to
+							contact us from <a href="mailto:workcompany27@gmail.com">here</a>.</p>
+					</div>
+				</div>
+				<div id="two" class="content fade">
+					<h1>Setup Firebase</h1>
+
+					<!-- <p>Firebase used for <strong> Google Login </strong>, <strong>Phone Login</strong>, <strong>Dynamic Links</strong>, <strong>Push notifications</strong>,
+						<strong>Monitoring</strong>, <strong>Analytics</strong> and <strong>Crashlytics</strong></p><br> -->
+
+						<h2>Watch this video From our youtube channel</h2>
+						<h4>Please like and subscribe to help us grow up.</h4>
+						<h4>Leave a comment on youtube if you want some help, our team will contact you.</h4>
+						<h5><a href="https://youtu.be/8m5gqrCEoHc" target="_blank">Click to watch.</a></h5>
+						<br>
+						<br>
+						<h3>Or you can follow these steps:</h3>
+						<hr>
+
+					<h4> Go to <a target="_blank" href="https://console.firebase.google.com/u/0/">Firebase developer console</a> and Create a project.</h4>
+	
+					<ol>
+						<li>Click in add app</li>
+						<li>Choose <strong>Android</strong></li>
+						<!-- <li>Choose <strong>Android</strong>, repeat this step for <strong>iOS</strong> and <strong>Web</strong> also</li> -->
+						<li>Add your desired app package</li>
+						<li>Register an app and download a <strong>google-services.json</strong> file</li>
+						<li>Save it, we will use it later</li>
+					</ol>
+	
+					<br><br>
+				
+					<h3 class="hash-header" id="push_android">Setup Push notifications for Android<a href="#push_android" class="hash-link"></a></h3>
+					<p>Push notifications for Android needs SenderID and FCM Token</p>
+					<ol>
+						<li>CLick In Project Settings</li>
+						<li>Click in Cloud Messaging</li>
+						<li>In Top settings</li>
+						<li>Copy both Server key token (FCM) and Sender ID</li>
+						<li>Save it for later use</li>
+					</ol>
+	
+					<!-- <br><br>
+					<h3 class="hash-header" id="push_web">Setup Push notifications for Web<a href="#push_web" class="hash-link"></a></h3>
+					<p>Push notifications for Web needs Web Push Token</a> </p>
+					<ol>
+						<li>CLick In Project Settings</li>
+						<li>Click in Cloud Messaging</li>
+						<li>In Web app settings</li>
+						<li>Copy Key-pair</li>
+						<li>Save it for later use</li>
+					</ol> -->
+	
+					<br><br>
+					<h4> IMPORTANT</h4>
+					<p>- Phone Number Login for Android needs SHA-1 and SHA-256 correctly added in firebase</p>
+					<!-- <p>- Google Login and Phone Number Login for Android needs SHA-1 and SHA-256 correctly added in firebase</p> -->
+					
+				</div>
+				<div id="three" class="content fade">
+
+					<h1> Setup Agora.io </h1>
+	
+					<p>Agora.io used for <strong>Live Streaming</strong>,<strong> Video Call </strong> and <strong>Voice Call</strong></p><br>
+
+					<h2>Watch this video From our youtube channel</h2>
+						<h4>Please like and subscribe to help us grow up.</h4>
+						<h4>Leave a comment on youtube if you want some help, our team will contact you.</h4>
+						<h5><a href="https://youtu.be/IaRA72fwM04" target="_blank">Click to watch.</a></h5>
+						<br>
+						<br>
+						<h3>Or you can follow these steps:</h3>
+						<hr>
+	
+					<p><h5> Go to <a target="_blank" href="https://console.agora.io/">Agora.io</a> and Login or Register. </h5>
+	
+					<ol>
+						<li>Create new app</li>
+						<li>Choose <strong>Testing mode: APP ID </strong></li>
+						<li>Copy App ID</li>
+						<li>Save it, we will use it later</li>
+					</ol>
+					
+				</div>
+
+				<div id="four" class="content fade">
+					
+					<h1> Setup Facebook </h1>
+	
+					<p>Facebook used for <strong>Facebook Login</strong> in <strong>Android </strong></p>
+					<br>
+					<h2>Watch this video From our youtube channel</h2>
+						<h4>Please like and subscribe to help us grow up.</h4>
+						<h4>Leave a comment on youtube if you want some help, our team will contact you.</h4>
+						<h5><a href="https://youtu.be/uygvPf-isWo" target="_blank">Click to watch.</a></h5>
+						<br>
+						<br>
+						<h3>Or you can follow these steps:</h3>
+						<hr>
+
+					
+					<h5> Go to <a target="_blank" href="https://developers.facebook.com/">Facebook Developer</a> and Login  or Register </h5>
+	
+					<ol>
+						<li>Select Facebook Login product and click the Setup.</li>
+						<li>Select Android as the App platform. Then iOS, Then Web</li>
+						<li>Add key hash for release and debug. *</li>
+						<li>Click the Save button.</li>
+						<li>
+							Copy <strong>facebook_app_id</strong>, <strong>access_token</strong> and<strong> fb_login_protocol_scheme</strong>
+						</li>
+						<li> Go to App Review -> Request permissions and Features</li>
+						<li> Click in request advanced access to permissions bellow: <strong>email</strong> and <strong>public_profile</strong></li>
+						<li>Save it, we will use it later</li>
+					</ol>
+	
+					<h5>
+						<strong>*</strong> You need to
+						<a target="_blank" href="https://developers.facebook.com/docs/android/getting-started/#create_hash">
+							<strong>Generate Key hash</strong></a> for facebook Login to work.
+					</h5>
+
+				
+
+				</div>
+
+				<div id="five" class="content fade">
+
+					<h1> Setup Parse Server Backend </h1>
+	
+					<p>We used <a target="_blank" href="https://parseplatform.org/"><strong>Parse Server</strong></a> has backend, for more information about it, click on the link.</p><br>
+
+					<h2>Watch this video From our youtube channel</h2>
+						<h4>Please like and subscribe to help us grow up.</h4>
+						<h4>Leave a comment on youtube if you want some help, our team will contact you.</h4>
+						<h5><a href="https://youtu.be/DpM6DrxhCDs" target="_blank">Click to watch.</a></h5>
+						
+						<hr>
+	
+					<h4>
+						You have several options on how to get Parse Server as BaaS or install
+						your Self-hosted Parse Server
+					</h4>
+	
+					<h4>
+						1) <strong>Cloud Services:</strong> There are several companies offering
+						Parse Server.
+					</h4>
+	
+					<ul>
+						<li>
+							<a target="_blank" href="http://www.back4app.com" rel="nofollow"
+							>Back4app</a
+							>
+							<em>Recommended</em>
+						</li>
+						<li>
+							<a target="_blank" href="https://www.sashido.io" rel="nofollow"
+							>SashiDo</a
+							>
+						</li>
+						<li>
+							<a target="_blank" href="https://glitch.com" rel="nofollow">Glitch</a>
+						</li>
+						<li>
+							<a target="_blank" href="https://flynn.io" rel="nofollow">Flynn</a>
+						</li>
+					</ul>
+	
+					<h4>
+						2) <strong>Self-Hosted:</strong> You can install Parse server in your own
+						Hosting Provider. <strong>Required NodeJS</strong>
+					</h4>
+	
+					<ul>
+						<li>
+							<a
+									target="_blank"
+									href="http://www.a2hosting.com/?aid=58764711d35b6"
+									rel="nofollow"
+							>a2hosting</a
+							>
+							<em
+							>1st Recommended (Purchase using this
+								<a href="http://www.a2hosting.com/?aid=58764711d35b6"
+								><strong>link</strong>)</a
+								></em
+							>
+						</li>
+						<li>
+							<a
+									target="_blank"
+									href="https://m.do.co/c/2e55c104a4fb"
+									rel="nofollow"
+							>Digital Ocean</a
+							>
+							<em
+							>2nd Recommended (Purchase using this
+								<a href="https://m.do.co/c/2e55c104a4fb"
+								><strong>link</strong>)</a
+								></em
+							>
+						</li>
+						<li>
+							<a
+									target="_blank"
+									href="https://devcenter.heroku.com/articles/deploying-a-parse-server-to-heroku"
+									rel="nofollow"
+							>Heroku and mLab</a
+							>
+						</li>
+						<li>
+							<a
+									target="_blank"
+									href="http://mobile.awsblog.com/post/TxCD57GZLM2JR/How-to-set-up-Parse-Server-on-AWS-using-AWS-Elastic-Beanstalk"
+									rel="nofollow"
+							>AWS and Elastic Beanstalk</a
+							>
+						</li>
+						<li>
+							<a
+									target="_blank"
+									href="https://medium.com/@justinbeckwith/deploying-parse-server-to-google-app-engine-6bc0b7451d50"
+									rel="nofollow"
+							>Google App Engine</a
+							>
+						</li>
+						<li>
+							<a
+									target="_blank"
+									href="https://azure.microsoft.com/en-us/blog/azure-welcomes-parse-developers/"
+									rel="nofollow"
+							>Microsoft Azure</a
+							>
+						</li>
+						<li>
+							<a
+									target="_blank"
+									href="https://github.com/cf-platform-eng/pws-parse-server"
+							>Pivotal Web Services</a
+							>
+						</li>
+					</ul>
+	
+					<h3>
+						The tutorial is about <strong>Back4app.com</strong> if you want to work
+						with any other, you need to do it yourself, hire developer or pay
+						installation fees
+					</h3>
+
+				</div>
+
+				<div id="six" class="content fade">
+					<h1> Import Project, setup Apps and Customize </h1>
+	
+					<h3 class="hash-header" id="flutter">Install or Update flutter <a href="#flutter" class="hash-link"></a></h3>
+					<p>Since this project is developed with Flutter, make sure to correctly install flutter and dart in your computer</p>
+					<p>If you need help to install flutter click here:<a target="_blank" href="https://docs.flutter.dev/get-started/install"> Install Flutter</a> </p>
+					<br><br>
+	
+					<h3 class="hash-header" id="import">Import and Setup Project<a href="#import" class="hash-link"></a></h3>
+					<p>You can use <a target="_blank" href="https://developer.android.com/studio">Android Studio</a> or <a target="_blank" href="https://code.visualstudio.com/">Visual Studio Code</a>, make sure to use latest versions</p>
+					<br>
+					
+					<iframe width="800" height="443" src="https://www.youtube.com/embed/xNw0PjJ16DE?si=_rboSSnKFJropVwN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+					<h2>Watch this video From our youtube channel</h2>
+					<h4>Please like and subscribe to help us grow up.</h4>
+					<h4>Leave a comment on youtube if you want some help, our team will contact you.</h4>
+					<h5><a href="https://youtu.be/mSf11o6RZFw" target="_blank">Click to watch.</a></h5>
+					<br>
+					<br>
+					<h3>Or you can follow these steps:</h3>
+					<hr>
+					<ol>
+						<li>Extract Zip file Downloaded from codecanyon</li>
+						<li>Navigate to Trace_app.zip file and extract it too</li>
+						<li>Open android Studio to Import the project</li>
+						<li>Click on <strong>Import Android Studio project</strong></li>
+						<li>Navigate to extracted toochat_app folder</li>
+						<li>Click in OK or import then wait for Android Studio to load setup all files and index them.</li>
+						<li>Open terminal or cmd </li>
+						<li>In your project root run <code>$ flutter pub get</code> and wait to finish</li>
+					</ol>
+					
+					<h5>After that, we will update all credentials we saved in steps before.</h5>
+	
+					<br><br>
+	
+					<h3 id="setup_android_app">Setup Android App</h3>
+					 <div style="overflow: hidden; position: relative;">
+						
+					</div>
+					<br><br>
+					<ol>
+						<li>Open terminal or cmd </li>
+						<li>In your project root run <code>$ flutter pub run change_app_package_name:main com.your.package.name</code></li>
+						<li>Open Android Project and Change App name and Facebook App</li>
+					</ol>
+					<br><br>
+	
+					<!--
+					<h3 id="setup_web_app">Setup Web App</h3>
+					<div style="overflow: hidden; position: relative;">
+						<iframe width="800"
+								height="443"
+								type="text/html"
+								src="https://www.youtube.com/embed/hIWVieZm8g4?autoplay=0&fs=1&iv_load_policy=1&showinfo=1&rel=0&cc_load_policy=0&start=0&end=0"
+						></iframe>
+					</div>
+					<br><br> 
+					<ol>
+						<li>Open <code>index.html</code> and change <strong>description</strong> and <strong>google-signin-client_id</strong></li>
+						<li>Open <code>firebase-messaging-sw.js</code> and change <strong>firebase.initializeApp</strong> content </li>
+					</ol>-->
+	
+					<h3 id="setup_logo_splash">Customize Logo and Splash</h3>
+					<ol>
+						<li>Go to <code>assets-> images</code> and override <code>ic_logo.png</code> and  <code>ic_logo_white.png</code> with your own Logos (Light and Dark)</li>
+						<li>In your project root run <code>$ flutter pub run flutter_native_splash:create</code></li>
+					</ol>
+
+				</div>
+
+				<div id="seven" class="content fade">
+					<h1> Install and Setup Admin Panel</h1>
+	
+					<p>Parse Server has <a href="https://github.com/parse-community/parse-dashboard" target="_blank">Parse Dashboard </a> But since it's not easy to use, we decided to offer an easy and modern Admin Panel for you. </p>
+					<p>To Install Admin Panel is very easy and also it can be installed on any hosting provider, Shared, VPS, Dedicated, Cloud or others. Keep in mind that you need a Parse Server running somewhere, and at least 1 app is running, in order to get this Admin panel to work properly. </p>
+	
+					<!-- <div style="overflow:hidden;position: relative;">
+						<iframe width="800" height="443" type="text/html" src="https://www.youtube.com/embed/IyuXnvBJmWI?autoplay=0&fs=1&iv_load_policy=1&showinfo=1&rel=0&cc_load_policy=0&start=0&end=0"></iframe>
+						<div style="position: absolute;bottom: 10px;left: 0;right: 0;margin-left: auto;margin-right: auto;color: #fff;text-align: center;">
+							<small style="line-height: 1.8;font-size: 0px;background: #fff;"> <a href="https://support.angopapo.com/">Angopapo support</a> </small></div><style>.newst{position:relative;text-align:right;height:420px;width:520px;} #gmap_canvas img{max-width:none!important;
+							background:none!important}</style>
+					</div> -->
+					<h3 id="setup_web_app">Trace Admin panel Setup on cPanel 🔥🔥🔥</h3>
+					<div style="overflow: hidden; position: relative;">
+						<iframe width="800" height="443" type="text/html" src="https://www.youtube.com/embed/SL79lcok_Pk?si=AedW2zs4g2KS4smY"></iframe>
+					<br/> 
+		
+					<h4><strong>Upload Admin Panel Files to your hosting.</strong></h4>
+					<ol>
+						<li>  Extract <code>admincp.zip</code> you can found it in Main Files.zip</li>
+						<li>  run <code>$ npm install in Admin Panel root</code> Make sure you have <a href="https://nodejs.org/en/download/" target="_blank">NodeJS</a> installed</li>
+						<li>  Open <code>Configs.php</code> file and change: Website root url, <code>AppId</code>, <code>RestApiKey</code> and <code>MasterKey</code> of your Parse Server App.</li>
+						<li>  Upload in your hosting and Test by opening the url where you placed your admin panel in your browser.</li>
+	
+					</ol>
+	
+					<hr>
+	
+					<h3 id="setup_admin"><strong>Configuration</strong></h3>
+	
+					<p>DON'T CREATE USER MANUALLY IN YOUR PARSE DASHBOARD, MAKE SURE YOU REGISTERED USER IN WITH APP.</p>
+					<ol>
+	
+						<li> Setup Admin User(s)
+	
+							<pre>  Go to Parse Dashboard, and Under Classes, click in  <code>Users</code></pre>
+							<pre>  Choose User to turn admin, navigate to <code>role</code> column and set it's value <code>from</code> user to <code>admin</code> </pre>
+	
+						</li>
+						<li>Open your admin panel link and login.
+	
+							<pre>  Open your browser and input your admin panel url</pre>
+							<pre>  Login using email and password of any User you set admin role. </pre>
+	
+						</li>
+					</ol>
+	
+					<hr>
+	
+					<h3 id="explore"><strong>How to use</strong></h3>
+	
+					<p>Once Logged in, you will directly see how easy is to use Admin Panel, It allows you to see and manage almost
+						everything of your app, but for advanced use, for example to delete or update objects, you will need to use your Parse Dashboard
+						But we process that, we will add more feature in the next version.</p>
+	
+					<p>With <strong> Admin Panel version 1.1</strong> you can: </p>
+	
+					<ol>
+						<li>See all classes records, search and download files</li>
+						<li>Add new gifts</li>
+						<li>View Users/Admin Data</li>
+						<li>View Stories Data</li>
+						<li>View Lives Data</li>
+						<li>View Comments Data</li>
+						<li>View Posts Data</li>
+						<!-- <li>Suspend / Activate User account</li>
+						<li>Add credits to user <strong>New</strong></li>
+						<li>Add premium period to user <strong>New</strong></li> -->
+						<li>Login Settings to Enable or Disabled Logins system <strong>New</strong></li>
+					</ol>
+	
+					<hr>
+	
+					<h3 id="gift"><strong>Add your own Gifts</strong></h3>
+	
+					<p>Gifts are animated images that Users can offer each others for any reason, Heyto apps accept only Lottie files in Json format. You can download lottie files <a href="https://lottiefiles.com/" target="_blank">here</a></p>
+	
+					<ol>
+						<li>Open your Admin panel</li>
+						<li>Navigate to Gifts</li>
+						<li>Click and choose <strong>Add new gift</strong></li>
+						<li>Enter the gift <strong>Name, credits, category and file</strong></li>
+					</ol>
+	
+					<p>Gift <strong>Name</strong> is just for you to identify it, Gift <strong>Tickets</strong> is an amount that is needed for someone to purchase it and Gift <strong>File</strong> is a file download in Lottie website or created with After Effect and bodymovin, also it must be in <strong>JSON</strong> format extension.</p>
+	
+					<hr>
+	
+					<h3 id="credits"><strong>Sources and Credits</strong></h3>
+	
+					<p>This Admin Panel uses there programing languages
+	
+					<ul>
+						<li>PHP</li>
+						<li>Javascript</li>
+					</ul>
+	
+					<br><br>
+					<p>We also used these:
+	
+					<ul>
+						<li>HTML</li>
+						<li>CSS</li>
+						<li>Javascript</li>
+						<li>Composer</li>
+					</ul>
+	
+					<hr>
+				</div>
+
+				<div id="ten" class="content fade">
+					<h1> Supports </h1>
+					<p>Thank you for reading the documentation. If you still have any question or any problem, please
+						contact us. We'll give you the best support. Thanks.</p>
+					<ul style="list-style: none;">
+						<li><strong>Support email address:</strong> workcompany27@gmail.com</li>
+					</ul>
+
+					<p><strong>Have you enjoyed the App and its documentation?</strong> Please, don't forget to rate this item and leave your 
+					review <a href="https://codecanyon.net/user/appsdabanda/portfolio">here</a></p>
+
+					<p><a href="https://www.appsdabanda.com">Appsdabanda</a></p>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	</div>
+	<script src="js/jquery-3.1.0.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jstree.min.js"></script>
+	<script src="js/jstree.active.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>

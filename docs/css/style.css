@@ -1,0 +1,285 @@
+:root {
+    --prymary-color:#5D0375;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-top: 0px;
+}
+
+li{
+    font-size: 10pt;
+}
+
+ul li {
+    font-size: 10pt;
+}
+
+ol li,p {
+    font-size: 11pt;
+}
+
+p.note{
+    background-color: rgb(241, 241, 167);
+    color: #000;
+    padding: 10px;
+}
+
+p.subtitle {
+    font-size: 15pt;
+}
+
+body,
+html {
+    height: 100%;
+    background-color: #212529;
+    color: #ffffff;
+}
+
+body::-webkit-scrollbar {
+    width: 7px;
+}
+
+body::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--prymary-color);
+    border-radius: 10px;
+}
+
+a:hover,
+a:focus {
+    outline: none;
+    text-decoration: none;
+}
+
+.body {
+    font-size: 14px;
+}
+
+.wrapper {
+    position: relative;
+    height: 100%;
+}
+
+.left-side {
+    /* background-color: #212121; */
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 250px;
+    overflow-y: auto;
+    border-right: 1px solid var(--prymary-color);
+}
+
+.left-side::-webkit-scrollbar {
+    width: 5px;
+}
+
+.left-side::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+.left-side::-webkit-scrollbar-thumb {
+    background: var(--prymary-color);
+    border-radius: 10px;
+}
+
+.logo {
+    background-color: #212529;
+    /* border-right:1px solid rgba(192, 191, 191, 0.5); */
+    border-right:1px solid var(--prymary-color);
+    /*height: 110px;*/
+    height: 50px;
+    line-height: 110px;
+    text-align: center;
+}
+
+.left-content {
+    text-align: left;
+}
+
+.left-content {}
+
+.left-content ul {}
+
+.left-content ul li {
+    /* border-bottom: 1px solid var(--prymary-color); */
+    display: block;
+    height: 50px;
+    border-left: 3px solid #212529;
+    border-bottom: 1px solid var(--prymary-color);
+    border-right: 1px solid var(--prymary-color);
+}
+
+.left-content ul li:hover {
+    border-left: 3px solid var(--prymary-color);
+}
+
+.left-content ul li.active {
+    background-color: var(--prymary-color);
+    border-left: 3px solid var(--prymary-color);
+}
+
+.left-content ul li.active a{
+    color: white;
+}
+
+.left-content ul li.active a span {
+    border-color: #ffffff;
+}
+
+.left-content ul li a {
+    color: #ffffff;
+    line-height: 50px;
+    padding-right: 30px;
+    padding-left: 20PX;
+    display: block;
+    text-decoration: none;
+}
+
+.left-content ul li a span {
+    /* border-right: 1px solid var(--prymary-color); */
+    color: #ffffff;
+    display: inline-block;
+    float: left;
+    font-size: 20px;
+    height: 49px;
+    line-height: 50px;
+    text-align: center;
+    width: 50px;
+}
+
+.copyright {
+    background-color: var(--prymary-color);
+    bottom: 0;
+    color: #ffffff;
+    left: 0;
+    padding: 10px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+.copyright p {
+    margin-bottom: 0px;
+}
+
+.copyright p a {
+    color: #212121;
+    font-weight: 700;
+}
+
+.copyright p span {
+    display: block;
+}
+
+.right-side {
+    padding-left: 250px;
+    width: 75%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.right-content {
+    padding: 50px;
+}
+
+.right-content h1 {
+    /* color: var(--prymary-color); */
+    font-size: 23pt;
+}
+
+.content {
+    display: none;
+}
+
+.content.active {
+    display: block;
+}
+
+pre {
+    background: url(../img/pre_bg.png);
+    line-height: 19px;
+    text-align: left;
+    padding: 0px;
+    margin-top: 35px;
+    font-size: 13px;
+    margin-bottom: 35px;
+    color: white;
+}
+
+.content {}
+
+.content a {
+    color: #ffffff;
+    background-color: var(--prymary-color);
+    padding: 0px 5px;
+    border-radius: 10px;
+}
+
+.content h1 {
+    text-transform: uppercase;
+    font-weight: 700;
+    padding-bottom: 35px;
+    margin-bottom: 35px;
+    border-bottom: 1px solid #ddd;
+}
+
+#one span {
+    color: var(--prymary-color);
+}
+
+.content#source {}
+
+.content#source > ul li {}
+
+.content#source > ul li span {
+    font-weight: 700;
+    display: block;
+}
+
+.content#source > ul li > ul {
+    padding-left: 25px;
+}
+.logo h1 {
+    padding: 65px 0;
+}
+.tree-viewer-pd{
+	padding:30px;
+}
+
+tr{
+    margin-bottom: 10px;
+}
+
+td{
+    padding: 5px 10px;
+}
+
+td.center{
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+}
+
+@media screen and (max-width:1015px) {
+    .right-side {
+        width: 90%;
+    }
+}
