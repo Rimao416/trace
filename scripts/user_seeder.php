@@ -252,3 +252,4 @@ if (php_sapi_name() === 'cli') {
     echo "Ce script doit être exécuté en ligne de commande.\n";
 }
 ?>
+
