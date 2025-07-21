@@ -7,10 +7,14 @@ use Parse\ParseException;
 use Parse\ParseQuery;
 use Parse\ParseUser;
 
-
-session_start();
-
 $currUser = ParseUser::getCurrentUser();
+
+// Vérifier si l'utilisateur est connecté
+if (!$currUser) {
+    header("Location: ../index.php");
+    exit();
+}
+
 if ($currUser){
     // Store current user session token, to restore in case we create new user
     $_SESSION['token'] = $currUser -> getSessionToken();
