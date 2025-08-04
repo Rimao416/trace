@@ -1,6 +1,6 @@
 <?php
 require '../vendor/autoload.php';
-include '../Configs.php';
+include_once '../Configs.php';
 
 use Parse\ParseObject;
 use Parse\ParseQuery;
