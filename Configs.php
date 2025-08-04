@@ -2,7 +2,6 @@
 require 'vendor/autoload.php';
 $app_name = 'Trace';
 $default_icon_color = 'text-white'; // use Bootstrap text color sintax
-
 use Parse\ParseClient;
 use Parse\ParseSessionStorage;
 use Parse\ParseUser;
@@ -17,32 +16,34 @@ if (session_status() == PHP_SESSION_NONE) {
 // =====================================
 // FONCTION DE NETTOYAGE DE SESSION PARSE
 // =====================================
-function clearParseSession() {
-    try {
-        // Supprimer l'utilisateur actuel du cache
-        if (class_exists('Parse\ParseUser')) {
-            ParseUser::logOut();
-        }
-        
-        // Nettoyer le stockage de session Parse
-        if (class_exists('Parse\ParseClient')) {
-            $storage = ParseClient::getStorage();
-            if ($storage) {
-                $storage->clear(); // Efface tout le stockage Parse
+if (!function_exists('clearParseSession')) {
+    function clearParseSession() {
+        try {
+            // Supprimer l'utilisateur actuel du cache
+            if (class_exists('Parse\ParseUser')) {
+                ParseUser::logOut();
             }
-        }
-        
-        // Nettoyer les sessions PHP traditionnelles
-        if (session_status() == PHP_SESSION_ACTIVE) {
-            $_SESSION = array();
-        }
-        
-        if (isset($_GET['debug']) && $_GET['debug'] == 'true') {
-            echo "✅ Session Parse nettoyée avec succès\n";
-        }
-    } catch (Exception $e) {
-        if (isset($_GET['debug']) && $_GET['debug'] == 'true') {
-            echo "⚠️ Erreur lors du nettoyage: " . $e->getMessage() . "\n";
+           
+            // Nettoyer le stockage de session Parse
+            if (class_exists('Parse\ParseClient')) {
+                $storage = ParseClient::getStorage();
+                if ($storage) {
+                    $storage->clear(); // Efface tout le stockage Parse
+                }
+            }
+           
+            // Nettoyer les sessions PHP traditionnelles
+            if (session_status() == PHP_SESSION_ACTIVE) {
+                $_SESSION = array();
+            }
+           
+            if (isset($_GET['debug']) && $_GET['debug'] == 'true') {
+                echo "✅ Session Parse nettoyée avec succès\n";
+            }
+        } catch (Exception $e) {
+            if (isset($_GET['debug']) && $_GET['debug'] == 'true') {
+                echo "⚠️ Erreur lors du nettoyage: " . $e->getMessage() . "\n";
+            }
         }
     }
 }
@@ -62,7 +63,7 @@ try {
     $APP_ID = 'T9DQHJQkPYSt9gd7PLaWTwuDqTNaNQXEaLA2xQU5';
     $REST_KEY = 'PNrDNmmqCDVzvW1KZY89mX6ABpglg8Ntuvvc1mpe';
     $MASTER_KEY = 'tIUb5rA63HVyl5d6rtGnmefRZuX5xTPfzArigsdL';
-
+    
     // Affichage des clés uniquement en mode développement
     if (isset($_GET['debug']) && $_GET['debug'] == 'true') {
         echo "🔑 Utilisation des clés:\n";
@@ -70,13 +71,13 @@ try {
         echo "REST_KEY: " . substr($REST_KEY, 0, 8) . "...\n";
         echo "MASTER_KEY: " . substr($MASTER_KEY, 0, 8) . "...\n\n";
     }
-
+    
     ParseClient::initialize($APP_ID, $REST_KEY, $MASTER_KEY);
    
     // ✅ Configuration du serveur Back4App - URL CORRIGÉE
     ParseClient::setServerURL('https://parseapi.back4app.com', 'parse');
     ParseClient::setStorage(new ParseSessionStorage());
-
+    
     if (isset($_GET['debug']) && $_GET['debug'] == 'true') {
         echo "✅ Configuration Parse initialisée avec succès\n";
     }
@@ -91,74 +92,76 @@ try {
 // =====================================
 // TEST DE CONNEXION AVEC GESTION DES TOKENS INVALIDES
 // =====================================
-function testConnectionWithErrorHandling() {
-    try {
-        // Essayer d'abord de récupérer l'utilisateur actuel
-        $currentUser = ParseUser::getCurrentUser();
-        
-        if ($currentUser) {
-            // Tester si le token est toujours valide
-            try {
-                $currentUser->fetch(); // Force une requête au serveur
-                if (isset($_GET['debug']) && $_GET['debug'] == 'true') {
-                    echo "✅ Token de session valide pour: " . $currentUser->getUsername() . "\n";
-                }
-                return true;
-            } catch (ParseException $e) {
-                if ($e->getCode() == 209) { // Code d'erreur "Invalid session token"
+if (!function_exists('testConnectionWithErrorHandling')) {
+    function testConnectionWithErrorHandling() {
+        try {
+            // Essayer d'abord de récupérer l'utilisateur actuel
+            $currentUser = ParseUser::getCurrentUser();
+           
+            if ($currentUser) {
+                // Tester si le token est toujours valide
+                try {
+                    $currentUser->fetch(); // Force une requête au serveur
                     if (isset($_GET['debug']) && $_GET['debug'] == 'true') {
-                        echo "⚠️ Token de session invalide détecté. Nettoyage...\n";
+                        echo "✅ Token de session valide pour: " . $currentUser->getUsername() . "\n";
                     }
-                    
-                    // Forcer la déconnexion et nettoyer
-                    clearParseSession();
-                    
-                    if (isset($_GET['debug']) && $_GET['debug'] == 'true') {
-                        echo "✅ Session nettoyée. Token invalide résolu.\n";
+                    return true;
+                } catch (ParseException $e) {
+                    if ($e->getCode() == 209) { // Code d'erreur "Invalid session token"
+                        if (isset($_GET['debug']) && $_GET['debug'] == 'true') {
+                            echo "⚠️ Token de session invalide détecté. Nettoyage...\n";
+                        }
+                       
+                        // Forcer la déconnexion et nettoyer
+                        clearParseSession();
+                       
+                        if (isset($_GET['debug']) && $_GET['debug'] == 'true') {
+                            echo "✅ Session nettoyée. Token invalide résolu.\n";
+                        }
+                        return false;
                     }
-                    return false;
+                    throw $e; // Re-lancer si c'est une autre erreur
                 }
-                throw $e; // Re-lancer si c'est une autre erreur
             }
-        }
-        
-        // Test de connexion basique
-        if (isset($_GET['debug']) && $_GET['debug'] == 'true') {
-            echo "🔍 Test de connexion au serveur...\n";
-        }
-        
-        $testQuery = new ParseQuery('_User');
-        $testQuery->limit(1);
-        $result = $testQuery->find();
-        
-        if (isset($_GET['debug']) && $_GET['debug'] == 'true') {
-            echo "✅ Serveur Parse connecté avec succès\n";
-        }
-        return true;
-        
-    } catch (ParseException $e) {
-        if ($e->getCode() == 209) {
-            // Gestion spécifique des tokens invalides
+           
+            // Test de connexion basique
             if (isset($_GET['debug']) && $_GET['debug'] == 'true') {
-                echo "⚠️ Token invalide détecté lors du test de connexion\n";
+                echo "🔍 Test de connexion au serveur...\n";
             }
-            clearParseSession();
+           
+            $testQuery = new ParseQuery('_User');
+            $testQuery->limit(1);
+            $result = $testQuery->find();
+           
+            if (isset($_GET['debug']) && $_GET['debug'] == 'true') {
+                echo "✅ Serveur Parse connecté avec succès\n";
+            }
+            return true;
+           
+        } catch (ParseException $e) {
+            if ($e->getCode() == 209) {
+                // Gestion spécifique des tokens invalides
+                if (isset($_GET['debug']) && $_GET['debug'] == 'true') {
+                    echo "⚠️ Token invalide détecté lors du test de connexion\n";
+                }
+                clearParseSession();
+                return false;
+            }
+           
+            error_log("❌ Erreur de connexion Parse: " . $e->getMessage());
+            if (isset($_GET['debug']) && $_GET['debug'] == 'true') {
+                echo "❌ Erreur de connexion: " . $e->getMessage() . "\n";
+                echo "Code d'erreur: " . $e->getCode() . "\n";
+            }
+            return false;
+        } catch (Exception $e) {
+            error_log("❌ Erreur de connexion: " . $e->getMessage());
+            if (isset($_GET['debug']) && $_GET['debug'] == 'true') {
+                echo "❌ Erreur de connexion: " . $e->getMessage() . "\n";
+                echo "Code d'erreur: " . $e->getCode() . "\n";
+            }
             return false;
         }
-        
-        error_log("❌ Erreur de connexion Parse: " . $e->getMessage());
-        if (isset($_GET['debug']) && $_GET['debug'] == 'true') {
-            echo "❌ Erreur de connexion: " . $e->getMessage() . "\n";
-            echo "Code d'erreur: " . $e->getCode() . "\n";
-        }
-        return false;
-    } catch (Exception $e) {
-        error_log("❌ Erreur de connexion: " . $e->getMessage());
-        if (isset($_GET['debug']) && $_GET['debug'] == 'true') {
-            echo "❌ Erreur de connexion: " . $e->getMessage() . "\n";
-            echo "Code d'erreur: " . $e->getCode() . "\n";
-        }
-        return false;
     }
 }
 
@@ -183,7 +186,6 @@ date_default_timezone_set($GLOBALS['TIMEZONE']);
 // =====================================
 // FONCTIONS UTILITAIRES AMÉLIORÉES AVEC GESTION DES TOKENS
 // =====================================
-
 if (!function_exists('isUserLoggedIn')) {
     function isUserLoggedIn() {
         try {
@@ -191,11 +193,11 @@ if (!function_exists('isUserLoggedIn')) {
             if (!$currUser) {
                 return false;
             }
-            
+           
             // Vérifier que le token est valide en faisant une requête
             $currUser->fetch();
             return true;
-            
+           
         } catch (ParseException $e) {
             if ($e->getCode() == 209) {
                 // Token invalide, nettoyer la session
@@ -232,14 +234,14 @@ if (!function_exists('requireAdmin')) {
                 header("Location: ../index.php?admin_required=1");
                 exit();
             }
-            
+           
             // Vérifier le token et le rôle
             $currUser->fetch();
             if ($currUser->get("role") !== "admin") {
                 header("Location: ../auth/logout.php?insufficient_privileges=1");
                 exit();
             }
-            
+           
         } catch (ParseException $e) {
             if ($e->getCode() == 209) {
                 clearParseSession();
@@ -284,7 +286,7 @@ if (!function_exists('debugSessionState')) {
     function debugSessionState() {
         if (isset($_GET['debug']) && $_GET['debug'] == 'true') {
             echo "\n=== DEBUG SESSION STATE ===\n";
-            
+           
             $currentUser = ParseUser::getCurrentUser();
             if ($currentUser) {
                 echo "👤 Utilisateur connecté: " . $currentUser->getUsername() . "\n";
@@ -307,5 +309,4 @@ if (!function_exists('debugSessionState')) {
 if (isset($_GET['debug']) && $_GET['debug'] == 'true') {
     debugSessionState();
 }
-
 ?>

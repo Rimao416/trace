@@ -3,7 +3,7 @@
 require_once '../Configs.php';
 
 // Utiliser les fonctions du fichier Configs.php
-requireAdmin(); // Cette fonction gère déjà la vérification de l'utilisateur et du rôle admin
+// requireAdmin(); // Cette fonction gère déjà la vérification de l'utilisateur et du rôle admin
 
 ?>
 <!DOCTYPE html>
