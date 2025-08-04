@@ -9,18 +9,18 @@ $spinner_color = '#000';
 
 $success = false;
 $currUser = ParseUser::getCurrentUser();
-if ($currUser) {
+// if ($currUser) {
 
-    try {
-        if ($currUser->get("role") === 'admin') {
-            header('Refresh:0; url=../dashboard/panel.php');
-        } else {
-            header('Refresh:0; url=../auth/logout.php');
-        }
-    } catch (Exception $e) {
-    }
+//     try {
+//         if ($currUser->get("role") === 'admin') {
+//             header('Refresh:0; url=../dashboard/panel.php');
+//         } else {
+//             header('Refresh:0; url=../auth/logout.php');
+//         }
+//     } catch (Exception $e) {
+//     }
 
-}
+// }
 
 
 // LOGIN ------------------------------------------
