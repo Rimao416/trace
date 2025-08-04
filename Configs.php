@@ -13,9 +13,9 @@ if (session_status() == PHP_SESSION_NONE) {
 
 try {
     // ⚠️ REMPLACEZ CES CLÉS PAR VOS VRAIES CLÉS DE BACK4APP
-    $APP_ID = 'yL1nJF8JS7Rk3jPGsNgTDZQHsirdzUIDqS0m50kZ';
-    $REST_KEY = '270PdwN5NX85fATOx6nFOo1Yq3CkEI7IJrd2ikJo';
-    $MASTER_KEY = 'JB5A3o6BzG9auaHz0G3Qbp71E4rOq1HYHr9NIwZc';
+    $APP_ID = 'T9DQHJQkPYSt9gd7PLaWTwuDqTNaNQXEaLA2xQU5';
+    $REST_KEY = 'PNrDNmmqCDVzvW1KZY89mX6ABpglg8Ntuvvc1mpe';
+    $MASTER_KEY = 'tIUb5rA63HVyl5d6rtGnmefRZuX5xTPfzArigsdL';
 
     // Affichage des clés uniquement en mode développement
     if (isset($_GET['debug']) && $_GET['debug'] == 'true') {
